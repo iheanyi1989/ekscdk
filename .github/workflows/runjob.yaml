@@ -25,8 +25,9 @@ jobs:
 
       - name: Deploy/Update EKS cluster using CDK
         run: |
-          cd path/to/cdk/app
           npm install
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
           cdk deploy --all
 
       - name: Login to Amazon ECR
