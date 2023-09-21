@@ -36,6 +36,7 @@ class EksStack(Stack):
                               default_capacity=0,
                               version=eks.KubernetesVersion.V1_25,
                               role=cluster_role,
+                              cluster_name='dbekscluster'
                               )
         
         # Cretaes a linux node group with security configurations
