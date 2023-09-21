@@ -60,7 +60,8 @@ jobs:
         run: |
           # Ensure you're in the repository root
           cd $GITHUB_WORKSPACE
+          pwd
           # Replace the image in the k8s-deployment.yml with the new ECR image
-          sed -i 's#your-ecr-url/your-repo-name:latest#'"$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"'#' k8s-deployment.yml
+          sed -i 's#your-ecr-url/your-repo-name:latest#'"$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"'#' k8s-deployment.yaml
           # Apply the modified deployment
-          kubectl apply -f k8s-deployment.yml
+          kubectl apply -f k8s-deployment.yaml
