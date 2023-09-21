@@ -29,9 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-  AssumeRoleAndCallIdentity:
-    runs-on: ubuntu-latest
-    steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
